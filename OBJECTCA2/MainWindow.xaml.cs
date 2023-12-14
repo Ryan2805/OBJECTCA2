@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*===================================================
+ * Program Purpose: CA2 Object Oriented rogramming
+ * Date Created 14/12/2023
+ * Author: RYan Daly S00237889
+ * Github repo link: https://github.com/Ryan2805/OBJECTCA2
+ * 
+ * 
+ */
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
