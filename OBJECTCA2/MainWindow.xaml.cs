@@ -14,16 +14,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace OBJECTCA2
 {
@@ -33,7 +37,7 @@ namespace OBJECTCA2
     public partial class MainWindow : Window
     {
         private List<Team> teamslist;
-        
+
 
         public MainWindow()
         {
@@ -72,7 +76,7 @@ namespace OBJECTCA2
             //add the teams to the teams list box lbxTeams
             teamslist = new List<Team> { t1, t2, t3 };
             lbxTeams.ItemsSource = teamslist;
-            
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -89,7 +93,7 @@ namespace OBJECTCA2
             {
                 lbxPlayers.ItemsSource = selectedTeam.Players; // setting players to the lbxPlayers ListBox
 
-                
+
                 foreach (Player player in selectedTeam.Players)
                 {
                     int points = player.CalculatePoints();
@@ -97,7 +101,49 @@ namespace OBJECTCA2
                 }
             }
         }
+        private void btnWIN_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateResult('W');
+        }
+        private void btnDRAW_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateResult('D');
+        }
+
+        private void btnLOSS_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateResult('L');
+        }
+        private void UpdateResult(char outcome)
+        {
+            
+            Player selectedPlayer = lbxPlayers.SelectedItem as Player;
+
+            // check for null
+            if (selectedPlayer != null)
+            {
+                
+                string resultRecord = selectedPlayer.ResultRecord;
+
+                if (!string.IsNullOrEmpty(resultRecord) && resultRecord.Length >= 5)
+                {
+                   //removing the first string
+                    resultRecord = resultRecord.Substring(1);
+
+                    
+                    resultRecord += outcome;
+
+                    
+                    selectedPlayer.ResultRecord = resultRecord;
+
+                    //refesh list box
+                    lbxPlayers.Items.Refresh(); 
+                }
+            }
 
 
+
+        }
     }
 }
+       
