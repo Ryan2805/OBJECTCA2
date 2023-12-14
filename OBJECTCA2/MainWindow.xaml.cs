@@ -33,6 +33,7 @@ namespace OBJECTCA2
     public partial class MainWindow : Window
     {
         private List<Team> teamslist;
+        
 
         public MainWindow()
         {
@@ -78,17 +79,25 @@ namespace OBJECTCA2
         {
             // create     
         }
-
         private void lbxTeams_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //determine what team is selected
-            Team selected = lbxTeams.SelectedItem as Team;
-            //check for null
-            if (selected != null)
+            // Determine what team is selected
+            Team selectedTeam = lbxTeams.SelectedItem as Team;
+
+            // check for null
+            if (selectedTeam != null)
             {
-                //update the display
+                lbxPlayers.ItemsSource = selectedTeam.Players; // setting players to the lbxPlayers ListBox
+
                 
+                foreach (Player player in selectedTeam.Players)
+                {
+                    int points = player.CalculatePoints();
+                    player.Name += $" - Points: {points}";
+                }
             }
         }
+
+
     }
 }
