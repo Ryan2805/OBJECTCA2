@@ -9,11 +9,13 @@
     <Grid>
         <ListBox HorizontalAlignment="Left" Height="222" Margin="89,110,0,0" VerticalAlignment="Top" Width="180" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <ListBox HorizontalAlignment="Left" Height="215" Margin="377,117,0,0" VerticalAlignment="Top" Width="182" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="42" Margin="199,37,0,0" VerticalAlignment="Top" Width="298"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="17" Margin="648,237,0,0" VerticalAlignment="Top" Width="65"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="17" Margin="648,278,0,0" VerticalAlignment="Top" Width="65"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="18" Margin="648,314,0,0" VerticalAlignment="Top" Width="65"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="25" Margin="625,199,0,0" VerticalAlignment="Top" Width="113"/>
+        <Label Content="TiddlyWinks World Cup" HorizontalAlignment="Left" Height="42" Margin="199,37,0,0" VerticalAlignment="Top" Width="298" FontSize="20"/>
+        <Button x:Name="btnWIN" Content="Win" HorizontalAlignment="Left" Height="17" Margin="648,237,0,0" VerticalAlignment="Top" Width="65"/>
+        <Button x:Name="btnLOSS" Content="Loss" HorizontalAlignment="Left" Height="17" Margin="648,278,0,0" VerticalAlignment="Top" Width="65"/>
+        <Button x:Name="btnDRAW" Content="Draw" HorizontalAlignment="Left" Height="18" Margin="648,314,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Content="Record Result" HorizontalAlignment="Left" Height="38" Margin="635,186,0,0" VerticalAlignment="Top" Width="113" FontSize="16"/>
+        <Label Content="Teams" HorizontalAlignment="Left" Height="36" Margin="89,69,0,0" VerticalAlignment="Top" Width="90" FontSize="16" RenderTransformOrigin="0.478,-0.391"/>
+        <Label Content="Players" HorizontalAlignment="Left" Height="36" Margin="386,69,0,0" VerticalAlignment="Top" Width="111" FontSize="16"/>
 
     </Grid>
 </Window>
