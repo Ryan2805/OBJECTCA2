@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace OBJECTCA2
 {
-    internal class Teams
+    internal class Team
     {
         public string Name { get; set; }
-        public List<player> Players { get; set; }
+        public List<Player> Players { get; set; }
 
 
     }

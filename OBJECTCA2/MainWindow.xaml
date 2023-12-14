@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OBJECTCA2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Grid>
-        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="222" Margin="89,110,0,0" VerticalAlignment="Top" Width="180" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="lbxTeams" HorizontalAlignment="Left" Height="222" Margin="89,110,0,0" VerticalAlignment="Top" Width="180" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbxTeams_SelectionChanged"/>
         <ListBox x:Name="lbxPlayers" HorizontalAlignment="Left" Height="215" Margin="377,117,0,0" VerticalAlignment="Top" Width="182" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <Label Content="TiddlyWinks World Cup" HorizontalAlignment="Left" Height="42" Margin="199,37,0,0" VerticalAlignment="Top" Width="298" FontSize="20"/>
         <Button x:Name="btnWIN" Content="Win" HorizontalAlignment="Left" Height="17" Margin="648,237,0,0" VerticalAlignment="Top" Width="65"/>

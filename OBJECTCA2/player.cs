@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OBJECTCA2
 {
-    internal class player
+    internal class Player
     {
         public string Name { get; set; }
         public  string ResultRecord { get; set; }
