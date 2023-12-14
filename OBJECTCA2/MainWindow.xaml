@@ -1,0 +1,19 @@
+﻿<Window x:Class="OBJECTCA2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OBJECTCA2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="222" Margin="89,110,0,0" VerticalAlignment="Top" Width="180" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox HorizontalAlignment="Left" Height="215" Margin="377,117,0,0" VerticalAlignment="Top" Width="182" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="42" Margin="199,37,0,0" VerticalAlignment="Top" Width="298"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="17" Margin="648,237,0,0" VerticalAlignment="Top" Width="65"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="17" Margin="648,278,0,0" VerticalAlignment="Top" Width="65"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="18" Margin="648,314,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Content="Label" HorizontalAlignment="Left" Height="25" Margin="625,199,0,0" VerticalAlignment="Top" Width="113"/>
+
+    </Grid>
+</Window>
