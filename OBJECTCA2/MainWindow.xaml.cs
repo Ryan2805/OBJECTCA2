@@ -32,9 +32,12 @@ namespace OBJECTCA2
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<Team> teamslist;
+
         public MainWindow()
         {
             InitializeComponent();
+            GetData();
         }
         public void GetData()
         {
@@ -65,6 +68,10 @@ namespace OBJECTCA2
             t2.Players = new List<Player> { p4, p5, p6 };
             t3.Players = new List<Player> { p7, p8, p9 };
 
+            //add the teams to the teams list box lbxTeams
+            teamslist = new List<Team> { t1, t2, t3 };
+            lbxTeams.ItemsSource = teamslist;
+            
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -74,7 +81,14 @@ namespace OBJECTCA2
 
         private void lbxTeams_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            //determine what team is selected
+            Team selected = lbxTeams.SelectedItem as Team;
+            //check for null
+            if (selected != null)
+            {
+                //update the display
+                
+            }
         }
     }
 }

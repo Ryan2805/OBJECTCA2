@@ -11,7 +11,10 @@ namespace OBJECTCA2
         public string Name { get; set; }
         public List<Player> Players { get; set; }
 
-
+        public override string ToString()
+        {
+            return Name;
+        }
     }
         
 }
